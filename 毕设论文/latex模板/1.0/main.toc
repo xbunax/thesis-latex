@@ -1,0 +1,30 @@
+\contentsline {section}{\numberline {1}绪论}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}研究背景}{1}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}背景理论}{1}{subsection.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1}量子蒙特卡洛}{1}{subsubsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2}周期安德森模型}{2}{subsubsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.3}Hubbard模型}{3}{subsubsection.1.2.3}%
+\contentsline {subsubsection}{\numberline {1.2.4}RKKY相互作用}{4}{subsubsection.1.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.5}Kondo效应}{4}{subsubsection.1.2.5}%
+\contentsline {section}{\numberline {2}\ce {Ce3(Pt/Pd)In11}重费米子物理体系}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}超导与反铁磁共存}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}特性介绍}{5}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}电阻率随温度变化}{5}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}磁化系数}{6}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}反铁磁和非常规超导}{6}{subsubsection.2.2.3}%
+\contentsline {section}{\numberline {3}反铁磁性和非常规超导共存和竞争机制}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}非常规超导简介}{7}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}超导与反铁磁的竞争与共存}{8}{subsubsection.3.1.1}%
+\contentsline {section}{\numberline {4}利用多体计算方法模拟安德森模型的初步结果}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}模拟结果数据处理程序的编写}{9}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}运行所需环境}{9}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}程序编写思路}{9}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2}反铁磁结构因子}{12}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}超导计算结果}{13}{subsection.4.3}%
+\contentsline {section}{\numberline {5}总结与展望}{16}{section.5}%
+\contentsline {subsection}{\numberline {5.1}总结}{16}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}未来展望}{16}{subsection.5.2}%
+\contentsline {section}{参考文献}{17}{subsection.5.2}%
+\contentsline {section}{致谢}{18}{subsection.5.2}%
+\contentsline {section}{附录}{19}{subsection.5.2}%
+\contentsfinish 
