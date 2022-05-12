@@ -4,7 +4,7 @@
 \contentsline {subsubsection}{\numberline {1.2.1}Hubbard模型}{1}{subsubsection.1.2.1}%
 \contentsline {subsubsection}{\numberline {1.2.2}周期安德森模型}{2}{subsubsection.1.2.2}%
 \contentsline {subsubsection}{\numberline {1.2.3}Kondo效应}{3}{subsubsection.1.2.3}%
-\contentsline {subsubsection}{\numberline {1.2.4}RKKY(Ruderman–Kittel–Kasuya–Yosida)相互作用}{3}{subsubsection.1.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.4}Ruderman–Kittel–Kasuya–Yosida(RKKY)相互作用}{3}{subsubsection.1.2.4}%
 \contentsline {section}{\numberline {2}\ce {Ce3(Pt/Pd)In11}重费米子物理体系}{4}{section.2}%
 \contentsline {subsection}{\numberline {2.1}概述}{4}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}物理性质}{5}{subsection.2.2}%
@@ -13,26 +13,23 @@
 \contentsline {subsubsection}{\numberline {2.2.3}反铁磁和非常规超导}{5}{subsubsection.2.2.3}%
 \contentsline {section}{\numberline {3}反铁磁性和非常规超导共存和竞争机制}{6}{section.3}%
 \contentsline {subsection}{\numberline {3.1}非常规超导简介}{6}{subsection.3.1}%
-\contentsline {subsubsection}{\numberline {3.1.1}超导与反铁磁的竞争与共存}{7}{subsubsection.3.1.1}%
-\contentsline {section}{\numberline {4}关于\ce {Ce3PtIn11}计算模拟研究}{8}{section.4}%
+\contentsline {subsection}{\numberline {3.2}超导与反铁磁的竞争与共存}{7}{subsection.3.2}%
+\contentsline {section}{\numberline {4}关于\ce {Ce3PtIn11}的计算模拟研究}{8}{section.4}%
 \contentsline {subsection}{\numberline {4.1}模型构建}{8}{subsection.4.1}%
 \contentsline {subsubsection}{\numberline {4.1.1}哈密顿量}{8}{subsubsection.4.1.1}%
 \contentsline {subsubsection}{\numberline {4.1.2}参数}{9}{subsubsection.4.1.2}%
 \contentsline {subsubsection}{\numberline {4.1.3}极限情况}{9}{subsubsection.4.1.3}%
-\contentsline {subsection}{\numberline {4.2}DQMC}{10}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.2}行列式量子蒙特卡洛(DQMC)}{10}{subsection.4.2}%
 \contentsline {subsubsection}{\numberline {4.2.1}蒙特卡洛}{10}{subsubsection.4.2.1}%
 \contentsline {subsubsection}{\numberline {4.2.2}统计}{10}{subsubsection.4.2.2}%
-\contentsline {subsubsection}{\numberline {4.2.3}Trotter分解}{10}{subsubsection.4.2.3}%
-\contentsline {subsubsection}{\numberline {4.2.4}量子蒙特卡洛}{11}{subsubsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.3}模拟结果数据处理程序的编写}{11}{subsection.4.3}%
+\contentsline {subsubsection}{\numberline {4.2.3}量子蒙特卡洛}{11}{subsubsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.3}分析程序}{11}{subsection.4.3}%
 \contentsline {subsubsection}{\numberline {4.3.1}运行所需环境}{11}{subsubsection.4.3.1}%
 \contentsline {subsubsection}{\numberline {4.3.2}程序编写思路}{12}{subsubsection.4.3.2}%
 \contentsline {subsection}{\numberline {4.4}反铁磁结构因子}{14}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}d波超导}{15}{subsection.4.5}%
-\contentsline {section}{\numberline {5}总结与展望}{19}{section.5}%
-\contentsline {subsection}{\numberline {5.1}总结}{19}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}未来展望}{19}{subsection.5.2}%
-\contentsline {section}{参考文献}{20}{subsection.5.2}%
-\contentsline {section}{致谢}{22}{subsection.5.2}%
-\contentsline {section}{附录}{23}{subsection.5.2}%
+\contentsline {subsection}{\numberline {4.5}d波超导}{16}{subsection.4.5}%
+\contentsline {section}{\numberline {5}总结与展望}{18}{section.5}%
+\contentsline {section}{参考文献}{19}{section.5}%
+\contentsline {section}{致谢}{20}{section.5}%
+\contentsline {section}{附录}{21}{section.5}%
 \contentsfinish 

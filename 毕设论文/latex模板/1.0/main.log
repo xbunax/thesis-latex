@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.4.25)  10 MAY 2022 18:14
+This is XeTeX, Version 3.141592653-2.6-0.999994 (TeX Live 2022) (preloaded format=xelatex 2022.4.25)  12 MAY 2022 11:58
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -826,7 +826,37 @@ File: cover.pdf Graphic file (type pdf)
 <use cover.pdf, page 1>
 [1
 
-] (./abstract.tex
+]
+File: 保密协议1.pdf Graphic file (type pdf)
+<use 保密协议1.pdf>
+File: 保密协议1.pdf Graphic file (type pdf)
+<use 保密协议1.pdf>
+File: 保密协议1.pdf Graphic file (type pdf)
+<use 保密协议1.pdf, page 1>
+File: 保密协议1.pdf Graphic file (type pdf)
+<use 保密协议1.pdf, page 1>
+File: 保密协议1.pdf Graphic file (type pdf)
+<use 保密协议1.pdf, page 1>
+File: 保密协议1.pdf Graphic file (type pdf)
+<use 保密协议1.pdf, page 1>
+File: 保密协议1.pdf Graphic file (type pdf)
+<use 保密协议1.pdf, page 1>
+ [2]
+File: 保密协议2.pdf Graphic file (type pdf)
+<use 保密协议2.pdf>
+File: 保密协议2.pdf Graphic file (type pdf)
+<use 保密协议2.pdf>
+File: 保密协议2.pdf Graphic file (type pdf)
+<use 保密协议2.pdf, page 1>
+File: 保密协议2.pdf Graphic file (type pdf)
+<use 保密协议2.pdf, page 1>
+File: 保密协议2.pdf Graphic file (type pdf)
+<use 保密协议2.pdf, page 1>
+File: 保密协议2.pdf Graphic file (type pdf)
+<use 保密协议2.pdf, page 1>
+File: 保密协议2.pdf Graphic file (type pdf)
+<use 保密协议2.pdf, page 1>
+ [3] (./abstract.tex
 
 Package fontspec Info: Font family 'SimHei(0)' created for font 'SimHei' with
 (fontspec)             options
@@ -855,16 +885,21 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 9.
  (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)) [2] (./main.toc
-Overfull \hbox (5.16443pt too wide) in paragraph at lines 7--7
- []|| [][][]\TU/TimesNewRoman(0)/m/n/12 RKKY(Ruderman |\TU/SimSun(0)/m/n/12 –| \TU/TimesNewRoman(0)/m/n/12 Kittel |\TU/SimSun(0)/m/n/12 –| \TU/TimesNewRoman(0)/m/n/12 Kasuya |\TU/SimSun(0)/m/n/12 –| \TU/TimesNewRoman(0)/m/n/12 Yosida) \TU/SimSun(0)/m/n/12 相 互 作 用[][]|   []| |   
+)
+Overfull \hbox (0.66544pt too wide) in paragraph at lines 9--12
+[]\TU/SimSun(0)/m/n/10.95 重 费 米 子 材 料 是 一 种 强 关 联 电 子 系 统，|  最 近 发 现 多 个 不 等 价 位 点 的 化 合 物 如$[][][][][][][][][][][]$ 
  []
 
-[3])
+) [4] (./main.toc
+Overfull \hbox (5.16443pt too wide) in paragraph at lines 7--7
+ []|| [][][]\TU/TimesNewRoman(0)/m/n/12 Ruderman |\TU/SimSun(0)/m/n/12 –| \TU/TimesNewRoman(0)/m/n/12 Kittel |\TU/SimSun(0)/m/n/12 –| \TU/TimesNewRoman(0)/m/n/12 Kasuya |\TU/SimSun(0)/m/n/12 –| \TU/TimesNewRoman(0)/m/n/12 Yosida(RKKY) \TU/SimSun(0)/m/n/12 相 互 作 用[][]|   []| |   
+ []
+
+[5])
 \tf@toc=\write5
 \openout5 = `main.toc'.
 
- [4] (./mainbody.tex [1]
+ [6] (./mainbody.tex [1]
 Overfull \hbox (0.25229pt too wide) detected at line 66
 \OML/cmm/m/it/12 H \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 ^^O[]c[]c[] \OT1/cmr/m/n/12 + [] \OML/cmm/m/it/12 ^^O[]f[]f[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 U [] f[]f[]f[]f[] \OT1/cmr/m/n/12 + [] \OML/cmm/m/it/12 V[] []
  []
@@ -904,7 +939,7 @@ File: /mnt/d/共享文件夹/毕设论文/latex模板/figures/figure6.jpg Graphi
  [7]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mhchem@cee' on input line 175.
+(hyperref)                removing `\mhchem@cee' on input line 176.
 
 File: /mnt/d/共享文件夹/毕设论文/latex模板/figures/figure2.png Graphic file (type bmp)
 </mnt/d/共享文件夹/毕设论文/latex模板/figures/figure2.png>
@@ -941,38 +976,31 @@ Package fontspec Info: Font family 'FandolFang-Regular(0)' created for font
 (fontspec)             - 'bold italic small caps'  (b/scit) with NFSS spec.: 
 
 [11] [12]
-Overfull \hbox (0.81436pt too wide) in paragraph at lines 353--354
+Overfull \hbox (0.81436pt too wide) in paragraph at lines 349--350
 [][][][][][][][][][][][][][][][][] 
  []
 
-[13] [14]
+[13]
 File: /mnt/d/共享文件夹/毕设论文/latex模板/figures/figure3.png Graphic file (type bmp)
 </mnt/d/共享文件夹/毕设论文/latex模板/figures/figure3.png>
 File: /mnt/d/共享文件夹/毕设论文/latex模板/figures/figure7.png Graphic file (type bmp)
 </mnt/d/共享文件夹/毕设论文/latex模板/figures/figure7.png>
-
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[15] [16]
-File: /mnt/d/共享文件夹/毕设论文/latex模板/figures/figure9.jpg Graphic file (type bmp)
-</mnt/d/共享文件夹/毕设论文/latex模板/figures/figure9.jpg>
+ [14] [15]
+File: /mnt/d/共享文件夹/毕设论文/latex模板/figures/figure9.png Graphic file (type bmp)
+</mnt/d/共享文件夹/毕设论文/latex模板/figures/figure9.png>
 File: /mnt/d/共享文件夹/毕设论文/latex模板/figures/figure8.jpg Graphic file (type bmp)
 </mnt/d/共享文件夹/毕设论文/latex模板/figures/figure8.jpg>
- [17]) [18] (./conclusion.tex) [19] (./references.tex [20]) [21] (./acknowlegements.tex) [22] (./appendix.tex [23] [24] [25] [26] [27] [28] [29]) [30] (./main.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+ [16]) [17] (./conclusion.tex) [18] (./references.tex) [19] (./acknowlegements.tex) [20] (./appendix.tex [21] [22] [23] [24] [25] [26] [27]) [28] (./main.aux)
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 6D29D0F4EF4EAC8B85F8D7B9CDDB1B5D;4089.
+(rerunfilecheck)             Checksum: F50B5D7FED5CCE9C908E53BCC22BDC83;3805.
  ) 
 Here is how much of TeX's memory you used:
- 21844 strings out of 476179
- 451087 string characters out of 5809544
- 1047173 words of memory out of 5000000
- 42192 multiletter control sequences out of 15000+600000
+ 21863 strings out of 476179
+ 451423 string characters out of 5809544
+ 1044173 words of memory out of 5000000
+ 42207 multiletter control sequences out of 15000+600000
  480541 words of font info for 127 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 75i,17n,90p,551b,1875s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,17n,90p,743b,1882s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on main.pdf (34 pages).
