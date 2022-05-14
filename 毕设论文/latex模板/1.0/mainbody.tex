@@ -1,9 +1,9 @@
 \pagenumbering{arabic}
 \section{绪论}
 \subsection{研究背景}
-在固体物理中，重费米子材料是一种特殊的过渡金属化合物属于强关联电子系统如\ce{Ce3PtIn11}。重费米子化合物的性质通常来自稀土或锕系元素离子的部分填充的f轨道，表现为有效的局域磁矩。“重费米子”这个名字来自于费米子的行为，即它的有效质量大于其静止质量。以电子为例，低于特征温度时（通常为10$K$），这些金属化合物中的传导电子表现为它们的有效质量是自由粒子质量的100到1000倍。
+在固体物理中，重费米子材料是一种特殊的过渡金属化合物如\ce{Ce3PtIn11}，属于强关联电子系统。重费米子化合物的性质通常来自稀土或锕系元素离子的部分填充的$f$轨道，表现为有效的局域磁矩。“重费米子”这个名字来自于费米子的行为，即它的有效质量大于其静止质量。以电子为例，低于特征温度时（通常为10$K$），这些金属化合物中的传导电子表现为它们的有效质量是自由粒子质量的100到1000倍。
 
-重费米子材料由K.Andres，J.E.Graebner和H.R.Ott在1975年发现，他们观察到\ce{CeAl3}中线性比热容变化很大，在对掺杂超导体的研究中得出结论：一种材料中存在局域磁矩和超导态是不相容的，但是在1979年。Frank Steglich等人在\ce{CeCu2Si2}中发现了重费米子的超导性。H.von Löhneysen等人于1994年在重费米子化合物的相图中发现了量子临界点和非费米液体行为，导致人们对这些化合物的研究产生了新的兴趣。另一个实验突破是（由Gil Lonzarich小组证明）重费米子中的量子临界性可能是非常规超导性的原因。
+重费米子材料由K.Andres，J.E.Graebner和H.R.Ott在1975年发现，他们观察到\ce{CeAl3}中线性比热容变化很大，在对掺杂超导体的研究中得出结论：一种材料中存在局域磁矩和超导态是不相容的。但是在1979年，Frank Steglich等人在\ce{CeCu2Si2}中发现了重费米子的超导性，H.von Löhneysen等人于1994年在重费米子化合物的相图中发现了量子临界点和非费米液体行为，导致人们对这些化合物的研究产生了新的兴趣。另一个实验突破是（由Gil Lonzarich小组证明）重费米子中的量子临界性可能是非常规超导性的原因。
 
 
 本文目的是利用Determinant Quantum Monte Carlo(DQMC)，构建对这类材料的有效模型，针对构建的模型进行计算模拟研究，对\ce{Ce3(Pd/Pt)In11}材料中发现的超导与反铁磁共存的现象进行模拟。
@@ -54,17 +54,17 @@ H=\sum_{i, j} \sum_{\sigma} T_{i j} C_{i \sigma}^{+} C_{j \sigma}+\frac{U}{2} \s
 $$
 
 \subsubsection{周期安德森模型}
-周期安德森模型是 P. W. Anderson提出用哈密顿量解决金属中的磁性杂质\cite{2}。现用于描述近藤效应的问题，例如重费米子系统以及近藤绝缘体。对于单个杂质，哈密顿量为
+P. W. Anderson提出周期安德森模型用于解决金属中的磁性杂质问题\cite{2}。现用于描述近藤效应的问题，例如重费米子系统以及近藤绝缘体。对于单个杂质，哈密顿量为
 $$
 H=\sum_{k, \sigma} \epsilon_{k} c_{k \sigma}^{\dagger} c_{k \sigma}+\sum_{\sigma} \epsilon_{d} d_{\sigma}^{\dagger} d_{\sigma}+U d_{\uparrow}^{\dagger} d_{\uparrow} d_{\downarrow}^{\dagger} d_{\downarrow}+\sum_{k, \sigma} V_{k}\left(d_{\sigma}^{\dagger} c_{k \sigma}+c_{k \sigma}^{\dagger} d_{\sigma}\right)
 $$
-其中c是传导电子的湮灭算符，d是杂质的湮灭算符，k是传导电子波矢量，$\sigma$标记自旋，U是库伦排斥，V表示杂化。
+其中c是传导电子的湮灭算符，d是杂质的湮灭算符，k是传导电子波矢量，$\sigma$表示自旋，U是库伦排斥，V表示杂化。
 
 对于重费米子系统，周期安德森模型(PAM)描述了杂质晶格，其中一维模型哈密顿量为
 $$
 H=\sum_{k, \sigma} \epsilon_{k} c_{k \sigma}^{\dagger} c_{k \sigma}+\sum_{j, \sigma} \epsilon_{f} f_{j \sigma}^{\dagger} f_{j \sigma}+U \sum_{j} f_{j \uparrow}^{\dagger} f_{j \uparrow} f_{j \downarrow}^{\dagger} f_{j \downarrow}+\sum_{j, k, \sigma} V_{j k}\left(e^{i k x_{j}} f_{j \sigma}^{\dagger} c_{k \sigma}+e^{-i k x_{j}} c_{k \sigma}^{\dagger} f_{j \sigma}\right)
 $$
-其中$x_j$是杂质位点j的位置，f是杂质产生算符(在重费米子系统中按照惯例用d代替)，杂化项允许重费米子系统中的f轨道的电子相互作用，即使电子之间最大距离超过了Hill极限(Hill极限是锕系元素或稀土原子晶格中定义的临界距离，即晶格中的两个原子如果相隔的距离大于Hill极限，f轨道的重叠就可以忽略不计)。%解释Hill极限
+其中$x_j$是杂质位点j的位置，$f$是杂质产生算符(在重费米子系统中按照惯例用d代替)，杂化项允许重费米子系统中的$f$轨道的电子相互作用，即使电子之间最大距离超过了Hill极限(Hill极限是锕系元素或稀土原子晶格中定义的临界距离，即晶格中的两个原子如果相隔的距离大于Hill极限，$f$轨道的重叠就可以忽略不计)。%解释Hill极限
 
 \subsubsection{Kondo效应}
 近藤效应描述了金属中传导电子由于磁性杂质的散射，从而导致特性变化，即电阻率随温度变化的最小值(如图\ref{fig})。近藤俊彦首先解释了这种影响的原因\cite{3}，他将三阶微扰理论应用于该问题，以解释s轨道传导电子对杂质处d轨道电子的散射(近藤模型)。
@@ -78,17 +78,17 @@ $$
 $$
 \rho(T)=\rho_{0}+a T^{2}+c_{m} \ln \frac{\mu}{T}+b T^{5}
 $$
-其中$\rho_0$表示剩余电阻率，$aT^2$表示费米液体性质的贡献，$bT^5$表示晶格振动：$a,b,c_m$和$\mu$是与温度无关的量。近藤俊彦导出了第三项，该项与温度和实验观察到的呈对数关系。
+其中$\rho_0$表示剩余电阻率，$aT^2$表示费米液体性质的贡献，$bT^5$表示晶格振动：$a,b,c_m$和$\mu$是与温度无关的量。近藤俊彦导出了第三项，该项与温度呈对数关系。
 
 
 \subsubsection{Ruderman–Kittel–Kasuya–Yosida(RKKY)相互作用}
-RKKY interaction指的是通过传导电子的相互作用，金属中的核磁矩或局域内部d或f壳层电子自旋的耦合机制\cite{5}\cite{6}\cite{7}。
+RKKY interaction指的是通过传导电子的相互作用，金属中的核磁矩或局域内部$d$或$f$壳层电子自旋的耦合机制\cite{5}\cite{6}\cite{7}。
 
-RKKY相互作用最初由加州大学伯克利分校的马尔文·鲁德曼(Malvin Ruderman)和查尔斯·基特尔(Charles Kittel)提出，作为一种解释在天然金属银中观察到的异常宽的核自旋共振线的方法。该理论使用二阶微扰理论来描述间接交换耦合，其中一个原子的核自旋通过超精细相互作用与传导电子相互作用，该传导电子与另一个核自旋相互作用，从而在两个核自旋之间产生关联能。(与核自旋通过超精细相互作用耦合到传导自旋不同，另一种情况是内部电子自旋通过交换相互作用耦合到传导自旋。)该理论基于布洛赫波函数，因此仅适用于晶体系统。派生的相互作用采用以下形式：
+RKKY相互作用最初由加州大学伯克利分校的马尔文·鲁德曼(Malvin Ruderman)和查尔斯·基特尔(Charles Kittel)提出。作为一种解释在天然金属银中观察到的异常宽的核自旋共振线的方法，该理论使用二阶微扰理论来描述间接交换耦合，其中一个原子的核自旋通过超精细相互作用与传导电子相互作用，该传导电子与另一个核自旋相互作用，从而在两个核自旋之间产生关联能。(与核自旋通过超精细相互作用耦合到传导自旋不同，另一种情况是内部电子自旋通过交换相互作用耦合到传导自旋。)该理论基于布洛赫波函数，因此仅适用于晶体系统。其相互作用采用以下形式：
 $$
 H\left(\mathbf{R}_{i j}\right)=\frac{\mathbf{I}_{i} \cdot \mathbf{I}_{j}}{4} \frac{\left|\Delta_{k_{m} k_{m}}\right|^{2} m^{*}}{(2 \pi)^{3} R_{i j}^{4} \hbar^2}\left[2 k_{m} R_{i j} \cos \left(2 k_{m} R_{i j}\right)-\sin \left(2 k_{m} R_{i j}\right)\right]
 $$
-其中H代表了哈密顿量，$R_{i,j}$代表了i和j两原子核之间的距离，$\mathbf{I}_i$为原子i的核自旋，$\Delta_{k_{m}k_m}$表示超精细相互作用强度的矩阵元，$m^*$表示晶格中的电子的有效质量，$k_m$是费米动量。 
+其中$H$代表了哈密顿量，$R_{i,j}$代表了i和j两原子核之间的距离，$\mathbf{I}_i$为原子i的核自旋，$\Delta_{k_{m}k_m}$表示超精细相互作用强度的矩阵元，$m^*$表示晶格中的电子的有效质量，$k_m$是费米动量。 
 
 
 
@@ -98,7 +98,7 @@ $$
 
 \section{\ce{Ce3(Pt/Pd)In11}重费米子物理体系}
 \subsection{概述}
-迄今为止研究的大多数铈重费米子化合物都有 一个Ce离子的晶体学位点。在两个或者更多不等位点的化合物中，相应Ce离子的不同的局部环境导致Ce的4f轨道态与周围的配合基和传导态的不同相互 作用。这反过来导致不同的近藤耦合强度。因此，在这些多位点铈化合物中，可能会出现各种新的和复杂的现象，其中基态的特征在于不同电子和磁性状态在微观尺度上的共存。如图\ref{fig1}，\ce{Ce3PdIn11}拥有两个Ce不等位点，其中一个Ce位点表示出顺磁性($T_N \approx 0.3K$)而另一个Ce位点展现反铁磁性($T_Q \approx 0.5K$)。
+迄今为止研究的大多数\ce{Ce}重费米子化合物都有 一个Ce离子的晶体学位点。在两个或者更多不等位点的化合物中，相应Ce离子的不同的局部环境导致Ce的$4f$轨道态与周围的配合基和传导态的不同相互作用。这反过来导致不同的近藤耦合强度。因此，在这些多位点铈化合物中，可能会出现各种新的和复杂的现象，其中基态的特征在于不同电子和磁性状态在微观尺度上的共存。如图\ref{fig1}，\ce{Ce3PdIn11}拥有两个Ce不等位点，其中一个Ce位点表示出顺磁性($T_N \approx 0.3K$)而另一个Ce位点展现反铁磁性($T_Q \approx 0.5K$)。
 
 \begin{figure}[h]
     \centering
@@ -114,24 +114,24 @@ $$
 
 \subsection{物理性质}
 \subsubsection{电阻率}
-如图\ref{fig2}在300K时，c轴电阻率等于$600 \Omega cm$，大约是基平面$\rho$的1.5倍。随着温度降低$\rho$表现出随温度$d \rho /d t > 0$的弱相关性。低于30K电阻率下降很快标志着高温下的不连续近藤散射向低温下的重电子布洛赫态的变化的交叉点。
+如图\ref{fig2}在$300K$时，c轴电阻率等于$600 \Omega cm$，大约是基平面$\rho$的1.5倍。随着温度降低$\rho$表现出随温度$d \rho /d t > 0$的弱相关性。低于$30K$电阻率下降很快标志着高温下的不连续近藤散射向低温下的重电子布洛赫态的变化的交叉点。
 
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.4]{/mnt/d/共享文件夹/毕设论文/latex模板/figures/figure4.png}
-    \caption{\ce{Ce3PtIn11}在$T < 3K$时的低温 特性。(a)在施加于c轴$B = 0.1T$的磁场中$\chi$与T的相关性。插入的部分显示了温度数据最大是10K。箭头指出了$\chi T$的最大值。(b)电子部分的比热$C_el/T$作为T的函数在零场中。红色的实线和蓝色的虚线分 别是$T < 0.8T_N$到$T = 0$的一个均值场和自旋波的拟合。(c)电阻归一化到其室温的值在B=0T和$j\perp c$\cite{8}。}
+    \caption{\ce{Ce3PtIn11}在$T < 3K$时的低温 特性。(a)在施加于c轴$B = 0.1T$的磁场中$\chi$与T的相关性。插入的部分显示了温度数据最大是$10K$。箭头指出了$\chi T$的最大值。(b)电子部分的比热$C_el/T$作为T的函数在零场中。红色的实线和蓝色的虚线分 别是$T < 0.8T_N$到$T = 0$的一个均值场和自旋波的拟合。(c)电阻归一化到其室温的值在B=0T和$j\perp c$\cite{8}。}
     \label{fig2}
 \end{figure}
 
 \subsubsection{磁化系数}
-$\chi(T)$沿晶格c轴和垂直于晶格c轴的磁场中测量到具有弱各向异性，在温度为3K时$\chi^{\parallel c}/\chi^{\perp c} \approx 1.25$。在超过150K时$\chi(T)$遵循Curie-Weiss定律两个方向的有效磁矩为$\mu_{eff}=2.60\mu_B /Ce$，与洪特规则对自由\ce{Ce^{3+}}离子符合很好。Weiss温度由对$\theta^{\perp c}_{p}=-64K$和$\theta^{\parallel c}_p=-42K$的曲线拟合到。图\ref{fig2}显示了\ce{Ce3PtIn11}在低温下的环境压力热力学和传输特性。在图\ref{fig2}(a)插入显示了在一个大的温度范围低温下磁化率$\chi^{\parallel c}$。
+$\chi(T)$沿晶格c轴和垂直于晶格c轴的磁场中测量到具有弱各向异性，在温度为$3K$时$\chi^{\parallel c}/\chi^{\perp c} \approx 1.25$。在超过$150K$时$\chi(T)$遵循Curie-Weiss定律，两个方向的有效磁矩为$\mu_{eff}=2.60\mu_B /Ce$，自由离子\ce{Ce^{3+}}与洪特规则符合得很好。Weiss温度由对$\theta^{\perp c}_{p}=-64K$和$\theta^{\parallel c}_p=-42K$的曲线拟合到。图\ref{fig2}显示了\ce{Ce3PtIn11}在低温下的环境压力热力学和传输特性。图\ref{fig2}(a)显示了在一个大的温度范围低温下磁化率$\chi^{\parallel c}$。
 
 \subsubsection{反铁磁和非常规超导}
-图\ref{fig2}(a)在更低温下$\chi(T)$在$T_1$时急剧下降，第二个AFM转变在$T \simeq 2.0k$表现为0.1T数据中显示为弱凸状结构。
+图\ref{fig2}(a)在更低温下$\chi(T)$在$T_1$时急剧下降，第二个AFM转变在$T \simeq 2.0k$表现为在$0.1T$数据中显示为弱凸状结构。
 
 将$C_{el}/T$跳跃的重点定义为过渡温度，分别得到$T_1 \simeq 2.2K$和$T_N \simeq 2K$，这些值与$\chi(T)$和$\rho(T)$的特征符合的很好(图\ref{fig2}中的虚线)。当$T=0.35K$时$C_{el}/T$发生了明显的变化，这表示了电阻率数据证实了材料向超导相的转变。将这个跳跃中点定义为$T_c \simeq 0.32K$。
 
-为了估算通常比热系数$\gamma_n$外推AFM低温向$T=0$变化的尾部图\ref{fig2}b红色虚线部分采用二阶平均场类型表达式，$C_{el}/T=\gamma_n + A e^{-\Delta_{AFM}/T}$。拟合结果是$\gamma_n=1.21J/(molK^2)$，$A=8.97J/(molK^2)$和$\Delta_{AFM}=3.44K$(拟合区间是$0.44<T<1.6K$)。拟合$C_{el}/T \propto T^2$(AFM自旋波)描述了相同区间的数据，具有相似的质量，但是$\gamma_n$减小了大约10\%。使用上述参数可以计算参数$\Delta C/(\gamma T_c)\approx 0.7$，大约是BCS理论预期值的一半。我们可以在这里假设，参与超导的导带中的电子等量得来自两个Ce位点。
+为了估算通常比热系数$\gamma_n$外推AFM低温向$T=0$变化的尾部图\ref{fig2}(b)红色虚线部分采用二阶平均场类型表达式，$C_{el}/T=\gamma_n + A e^{-\Delta_{AFM}/T}$。拟合结果是$\gamma_n=1.21J/(molK^2)$，$A=8.97J/(molK^2)$和$\Delta_{AFM}=3.44K$(拟合区间是$0.44<T<1.6K$)。拟合$C_{el}/T \propto T^2$(AFM自旋波)描述了相同区间的数据，具有相似的质量，但是$\gamma_n$减小了大约10\%。使用上述参数可以计算参数$\Delta C/(\gamma T_c)\approx 0.7$，大约是BCS理论预期值的一半。我们可以在这里假设，参与超导的导带中的电子等量得来自两个Ce位点。
 
 
 
@@ -141,13 +141,13 @@ $\chi(T)$沿晶格c轴和垂直于晶格c轴的磁场中测量到具有弱各向
 
 \section{反铁磁性和非常规超导共存和竞争机制}%分别介绍
 \subsection{非常规超导简介}
-在极低温下一些材料表现出完全抗磁性以及零电阻情况，常规超导可以用\\Bardeen-Cooper-Schrieffer (BCS)理论解释其中的微观图像：电子形成库伯对，配对电子可以凝聚，形成一个相位相干的宏观量子态。常规超导的共性：(1)常规材料的电子声子耦合较弱，转变温度$T_c$比较低；(2)超导态的序参量(超导电流密度)的对称性和晶格保持一致。常规超导体有广泛的应用前景，但是受限于较低转变温度$T_c$，难以大范围应用。
+在极低温下一些材料表现出完全抗磁性以及零电阻情况，常规超导可以用\\Bardeen-Cooper-Schrieffer (BCS)理论解释其中的微观图像：电子形成库伯对，配对电子可以凝聚，形成一个相位相干的宏观量子态。由此我们可以得到常规超导的共性：(1)常规材料的电子声子耦合较弱，转变温度$T_c$比较低；(2)超导态的序参量(超导电流密度)的对称性和晶格保持一致。常规超导体有广泛的应用前景，但是受限于较低转变温度$T_c$，难以大范围应用。
 
 对非常规超导尤其是重费米子超导体的研究表明，电子确实可以通过多种关联效应引起的临界涨落配对，比如自旋涨落、电荷密度涨落、价态涨落等。这些涨落足够强时，可以像声子一样在电子对之间产生净吸引效应，而克服电子之间的库伦排斥力并产生超导现象。并且大量的实验数据证实，无论是从能量尺度还是对称性角度，非常规超导和量子相变往往是紧密联系的。
 \subsection{超导与反铁磁的竞争与共存}
-如图\ref{fig3}所示，重费米子超导的一个重要研究价值在其丰富的相图。图\ref{fig3}(c)表示，大部分材料的低温相图与铜氧化合物、铁基高温超导体又非常类似。但是最早发现Ce基超导的\ce{CeCu2Si2}仍然存在争议，从其相图看，材料中的超导和反铁磁序是竞争关系而非共存。可以简单理解为Ce原子的仅有的一个f电子很难同时参与反铁磁长程有序和超导序，但是并不妨碍反铁磁涨落与超导的共存关系。
+如图\ref{fig3}所示，重费米子超导的一个重要研究价值在其丰富的相图。图\ref{fig3}(c)表示，大部分材料的低温相图与铜氧化合物、铁基高温超导体非常类似。但是最早发现Ce基超导的\ce{CeCu2Si2}仍然存在争议，从其相图看，材料中的超导和反铁磁序是竞争关系而非共存。可以简单理解为Ce原子的仅有的一个$f$电子很难同时参与反铁磁长程有序和超导序，但是并不妨碍反铁磁涨落与超导的共存关系。
 
-2011年O.Stockert等人通过非弹性中子散射实验给出了反铁磁涨落驱动\ce{CeCu2Si2}超导的明确证据。在超导态，自旋激发能谱中看到了清晰的能隙，是由于磁交换能部分转变成了库伯对的凝聚能。同时在\ce{CeCu2Si2}、\ce{CePd2Si2}、\ce{CeAu2Si2}等材料都在高压下、反铁磁消失的边界区域出现超导相，暗示了超导与反铁磁相的竞争关系。
+2011年O.Stockert等人通过非弹性中子散射实验给出了反铁磁涨落驱动\ce{CeCu2Si2}超导的明确证据。在超导态的自旋激发能谱中看到了清晰的能隙，这是由于磁交换能部分转变成了库伯对的凝聚能。同时在\ce{CeCu2Si2}、\ce{CePd2Si2}、\ce{CeAu2Si2}等材料都在高压下、反铁磁消失的边界区域出现超导相，暗示了超导与反铁磁相的竞争关系。
 
 
 
@@ -157,7 +157,7 @@ $\chi(T)$沿晶格c轴和垂直于晶格c轴的磁场中测量到具有弱各向
     \label{fig3}
 \end{figure}
 
-在2000年前后，发现的\ce{CeMIn5}(M=Co，Rh，Ir)极大的拓展了我们对重费米子超导以及反铁磁量子临界行为的认识。它们化学性质的特点在于Co、Rh、Ir这三种元素可以互相替代，获得连续可调的反铁磁态和超导态，同时超导和反铁磁相可以在微观共存。在\ce{CeRhIn5}中，电子的自旋和电荷自由度通过Kondo效应和RKKY相互作用紧密联系在一起，在图\ref{fig4}中可以明显看到温度-压力-磁场相图中很好的反应出来。
+在2000年前后发现的\ce{CeMIn5}(M=Co，Rh，Ir)极大的拓展了我们对重费米子超导以及反铁磁量子临界行为的认识。它们化学性质的特点在于Co、Rh、Ir这三种元素可以互相替代，从而获得连续可调的反铁磁态和超导态，同时超导和反铁磁相可以在微观共存。在\ce{CeRhIn5}中，电子的自旋和电荷自由度通过Kondo效应和RKKY相互作用紧密联系在一起，图\ref{fig4}中的温度-压力-磁场相图很好的反映出这一关系。
 \begin{figure}[h]
     \centering
     \includegraphics[scale=1]{/mnt/d/共享文件夹/毕设论文/latex模板/figures/figure6.jpg}
@@ -191,63 +191,69 @@ $\chi(T)$沿晶格c轴和垂直于晶格c轴的磁场中测量到具有弱各向
 \begin{figure}[h]
     \centering
     \includegraphics[scale=0.7]{/mnt/d/共享文件夹/毕设论文/latex模板/figures/figure2.png}
-    \caption{\ce{Ce3PtIn11}的有效模型示意图，$V_2$和$V_{12}$以及$V_1$为两者间的跃迁能,$U$为局域排斥相互作用。}
+    \caption{\ce{Ce3PtIn11}的有效模型示意图，$V_2$和$V_{12}$以及$V_1$为两者间的跃迁能，$U$为局域排斥相互作用，$C_1,f_1,f_2$为相应的轨道。}
     \label{fig4.1.1}
 \end{figure}
 
 \subsubsection{参数}
-本文假设$V_1 \geqslant V_2$并主要关注有代表性的$f$轨道的Hubbard相互作用$U=4.0t$。此外，我们将传导轨道和f轨道都视为晶格位置，因此密度$\rho$实际上是两个轨道的平均密度。由于利用量子蒙特卡洛模拟这类费米子模型出现的符号问题并且兼顾到模拟时间的限制，在大多数情况下，本文使用较小的晶格尺寸如$4 \times 4$和$6 \times 6$，以便研究系统在低温下的行为。
+本文假设$V_1 \geqslant V_2$并主要关注有代表性的$f$轨道的Hubbard相互作用$U=4.0t$。此外，我们将传导轨道和$f$轨道都视为晶格位置，因此密度$\rho$实际上是两个轨道的平均密度。由于利用量子蒙特卡洛模拟这类费米子模型出现的符号问题并且兼顾到模拟时间的限制，在大多数情况下，本文使用较小的晶格尺寸如$4 \times 4$和$6 \times 6$，以便研究系统在低温下的行为。
 
 \subsubsection{极限情况}
 实际研究模型性质之前，我们需要针对某些极限情况做一些测试，如图\ref{fig4.1.3}所示，当$f_1$和$f_2$轨道的相互作用很微弱时，可以近似认为没有相互作用，此时模型可以看成PAM进行计算。
 \begin{figure}[h]
-    \includegraphics[scale=0.8]{/mnt/d/共享文件夹/毕设论文/latex模板/figures/figure10.png}
-    \caption{晶格几何的一维表示，包括c，$f_1$。}
+    \centering
+    \includegraphics[scale=1]{/mnt/d/共享文件夹/毕设论文/latex模板/figures/figure10.png}
+    \caption{一维周期安德森模型，$C$和$f$分别为传导电子和局域的$f$轨道。}
     \label{fig4.1.3}
 \end{figure}
 
-\subsection{行列式量子蒙特卡洛(DQMC)}%蒙特卡洛
-\subsubsection{蒙特卡洛}
-蒙特卡罗方法，也称统计模拟方法，是1940年代中期由于科学技术的发展和电子计算机的发明，而提出的一种以概率统计理论为指导的数值计算方法。是指使用随机数(或更常见的伪随机数)来解决很多计算问题的方法。
+\subsection{蒙特卡洛}%蒙特卡洛
+\subsubsection{背景知识}
+蒙特卡洛方法，是1940年代中期由于科学技术的发展和电子计算机的发明而提出的一种以概率统计理论为指导的数值计算方法。以下介绍蒙特卡洛方法的一些相关理论与基础知识。
 
-对于稳态分布$\pi(i)$，我们有细致平衡条件：
-$$
-\pi(i)Q(i,j)\alpha(i,j)=\pi(j)Q(j,i)\alpha(j,i)
-$$
-其中$Q(i,j)$表示从$i$尝试跳往$j$的概率，$\alpha(i,j)$为相应的接收的概率。我们通常选择：
-$$
-\alpha(i,j)=min\left \{\frac{\pi(j)Q(j,i)}{\pi{i}Q(i,j)},1\right \}
-$$
-\\大多数情况下$Q(i,j)=Q(j,i)$。如经典Ising模型的Metropolis中，每个构型的权重$\propto e^{-\beta E}$，接收概率为$min \left \{ e^{-\beta \Delta E},1 \right \}$
-\subsubsection{统计}
-对于经典模型，我们有配分函数：
-$$
-Z=\sum_\sigma e^{-\beta E_\sigma}
-$$
+蒙特卡洛能够解决的问题可以粗略分为两类：一类是求解问题本身具有内在的随机性，计算机可以模拟这种随机过程，例如在核物理研究中，分析中子在反应堆中的传输过程。
 
-物理量：
-$$
-\left \langle O \right \rangle=\frac{1}{Z} \sum_C O e^{-\beta E_C}
-$$
+另一类问题是求解的问题可以转换为某种随机分布的特征数，比如随机事件出现的概率，或者随机变量的期望值。通过随机抽样的方法，以随机事件出现的频率估计其概率，或者以抽样的数字特征估算随机变量的数字特征，并将其作为问题的解。这种方法多用于求解复杂的多维积分问题。
 
-对于量子系统，配分函数：
-$$
-Z=Tr\{e^{-\beta H}\}
-$$
+在物理相关问题中，蒙特卡洛方法可用于模拟具有多个耦合自由度的系统，如流体、无序材料、强耦合固体和细胞结构等。原则上，蒙特卡罗方法可用于解决任何具有概率解释的问题。根据大数定律，某些随机变量的期望值所描述的积分可以通过取该变量独立样本的经验平均值(又称样本平均值)来近似。当变量的概率分布参数化时，数学家通常使用马尔可夫链蒙特卡罗(MCMC)采样器。中心思想是设计一个具有规定平稳概率分布的明智马尔可夫链模型。也就是说，在极限情况下，MCMC方法生成的样本来自目标分布的样本。
+% 对于稳态分布$\pi(i)$，我们有细致平衡条件：
+% $$
+% \pi(i)Q(i,j)\alpha(i,j)=\pi(j)Q(j,i)\alpha(j,i)
+% $$
+% 其中$Q(i,j)$表示从$i$尝试跳往$j$的概率，$\alpha(i,j)$为相应的接收的概率。我们通常选择：
+% $$
+% \alpha(i,j)=min\left \{\frac{\pi(j)Q(j,i)}{\pi{i}Q(i,j)},1\right \}
+% $$
+% \\大多数情况下$Q(i,j)=Q(j,i)$。如经典Ising模型的Metropolis中，每个构型的权重$\propto e^{-\beta E}$，接收概率为$min \left \{ e^{-\beta \Delta E},1 \right \}$。
+% \subsubsection{统计}
+% 对于经典的蒙特卡洛模型，我们有配分函数：
+% $$
+% Z=\sum_\sigma e^{-\beta E_\sigma}
+% $$
 
-选一组basis：
-$$
-Z=\sum_{\{\phi \}} \left \langle \{\phi \} | e^{-\beta H}| \{\phi \} \right \rangle
-$$
+% 其中物理量为：
+% $$
+% \left \langle O \right \rangle=\frac{1}{Z} \sum_C O e^{-\beta E_C}
+% $$
 
-物理量：
-$$
-\left \langle O \right \rangle=\frac{Tr\{ O e^{-\beta H} \}}{Z}
-$$
+% 而对于量子蒙特卡洛系统，配分函数为：
+% $$
+% Z=Tr\{e^{-\beta H}\}
+% $$
+
+% 选一组basis：
+% $$
+% Z=\sum_{\{\phi \}} \left \langle \{\phi \} | e^{-\beta H}| \{\phi \} \right \rangle
+% $$
+
+% 对于量子系统的物理量为：
+% $$
+% \left \langle O \right \rangle=\frac{Tr\{ O e^{-\beta H} \}}{Z}
+% $$
 
 
-\subsubsection{量子蒙特卡洛}
-DQMC模拟强关联系统的强有力的工具。强关联系统意味着量子粒子(例如电子)无法用独立电子近似描述(类似于密度泛函理论和能带结构计算)。
+\subsubsection{行列式量子蒙特卡洛(DQMC)}
+DQMC是模拟强关联系统的强有力的工具。强关联系统意味着量子粒子(例如电子)无法用独立电子近似描述(类似于密度泛函理论和能带结构计算)。
 
 DQMC主要用来计算有限温度的费米子系统。DQMC将求Trace转化为了求矩阵的行列式。例如：
 $$Tr[e^{- \sum_{i,j}\widehat{c}^\dagger_i A_{i,j}\widehat{c}_j}]=Det[\textbf{1}+e^{-\textbf{A}}]$$
@@ -293,11 +299,11 @@ $$
 \end{lstlisting}
 
 \subsubsection{程序编写思路}
-我们将数据从服务器下载到本地处理，利用pexpect库向终端提交scp命令将数据打包下载到本地处理\cite{}。
+我们将数据从服务器下载到本地处理，利用pexpect库向终端提交scp命令将数据打包下载到本地处理。
 \begin{lstlisting}
     cmdline = 'scp -r %s %s@%s:%s' % (filename, user, ip, dst_path)
 \end{lstlisting}
-接着我们定义了四个函数利用字符串格式化匹配数据文件名
+接着我们定义了四个函数利用字符串格式化匹配数据文件名。
 \begin{lstlisting}
 def filename_U4(self, V1_value, V2s_value, Nsite, seed, T, mus):
     return "U4_V{}_tp{}_N{}_be{}_{}_mu{}.out".format(V1_value, V2s_value, Nsite, T, seed, mus)
@@ -377,13 +383,13 @@ def data_temperature(self,path,ls,dtaus,V1_value,V2s_value,Nstie,\\ seed,mus,fil
 
 
 \subsection{反铁磁结构因子}%定义
-我们计算$f$轨道的反铁磁结构因子(AF)，
+本文着重于计算$f$轨道的反铁磁结构因子(AF)，
 $$
 S_{\mathrm{AF}}^{f}\left(V_{1}, V_{2}\right)=\frac{1}{N} \sum_{i j} e^{-i \mathbf{q} \cdot\left(\mathbf{R}_{\mathbf{i}}-\mathbf{R}_{\mathbf{j}}\right)}\left\langle\left(n_{i \uparrow}^{f}-n_{i \downarrow}^{f}\right)\left(n_{j \uparrow}^{f}-n_{j \downarrow}^{f}\right)\right),
 $$
 其中$\mathbf{q}=(\pi,\pi)$，$\mathbf{R_i}$表示位点$j$的坐标，$N$表示晶格大小。
 
-为了对模型进行测试。与之前发表文章中的图\ref{fig5}(b)进行比对。其中参数如下：$V_1=1.0$、$V_{2s}=1.0$、$V_{12s}=0.005$，晶格大小为$N=6 \times 6$，
+为了对模型进行测试，与之前发表文章中的图\ref{fig5}(b)进行比对，本文利用DQMC计算反铁磁结构因子，其中参数如下：$V_1=1.0$、$V_{2}=1.0$、$V_{12}=0.005$，晶格大小为$N=6 \times 6$。
 
 
 % \begin{figure}[htbp]
@@ -401,30 +407,25 @@ $$
 %     \label{fig7}
 % \end{figure}
 
-\begin{figure}
-    \centering
-    \subfigure{ 
-    \begin{minipage}[b]{0.7\textwidth}
+\begin{figure}[h]
         \centering   
-    \includegraphics[width=1\textwidth]{/mnt/d/共享文件夹/毕设论文/latex模板/figures/figure3.png}  
-    \caption{在V=1时随着$\beta$的增加以及不同晶格大小的情况下AF结构因子的变化\cite{10}。}
+    \includegraphics[scale=0.7]{/mnt/d/共享文件夹/毕设论文/latex模板/figures/figure3.png}  
+    \caption{在V=1时随着$\beta$的增加以及不同晶格大小的情况下反铁磁结构因子的变化\cite{10}。}
     \label{fig5} 
-    \end{minipage}   
-    }    
-    \subfigure{   
-    \begin{minipage}[b]{0.7\textwidth}   
-    \includegraphics[width=1\textwidth]{/mnt/d/共享文件夹/毕设论文/latex模板/figures/figure7.png} 
+    \end{figure}   
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.25]{/mnt/d/共享文件夹/毕设论文/latex模板/figures/figure7.png} 
     \caption{横坐标$\beta=1/T$，而纵坐标为反铁磁结构因子。计算的温度为$T=0.5t,0.25t,0.167t,0.125t,0.1t,0.083 t$。} 
     \label{fig7}  
-    \end{minipage}
-        } 
-    \end{figure}
-    
-其中V1\_value是图\ref{fig4.1.1}中的$V_1$，同理V2s\_value是图\ref{fig4.1.1}中的$V_2$。通过服务器的模拟结果如图\ref{fig7}所示。与文献中符合的较好。
+\end{figure}  
 
+    
+通过服务器的计算 模拟，结果如图\ref{fig7}所示，与文献中的图\ref{fig5}(b)符合的较好。
+\vskip5cm
 
 \subsection{d波超导}
-Hubbard模型有掺杂之后，会出现d波超导，类似的我们构建的模型掺杂之后，也可能会出现d波超导。因此，通过计算$f$电子的d波配对磁化率来研d波超导电性，
+Hubbard模型有掺杂之后，会出现d波超导，类似的我们构建的模型掺杂之后，也可能会出现d波超导。因此，通过计算$f$电子的d波配对磁化率来研究d波超导电性，
 \begin{equation}
     \begin{aligned}
     P_{d}=& \frac{1}{N} \frac{1}{G} \sum_{i j} \sum_{\delta \delta^{\prime}} g\left(\delta^{\prime}\right) g^{*}(\delta) \\
@@ -432,7 +433,7 @@ Hubbard模型有掺杂之后，会出现d波超导，类似的我们构建的模
     \label{4.5}
     \end{aligned}
 \end{equation}
-其中$g(\delta)$是实空间的一般形状因子，$G=\sum_\delta |g(\delta)|^2$是归一化因子。特别的，对于d波配对通道，沿x和y方向的最近邻分离$\delta$的$g(\delta)=\pm 1$。相似的我们可以定义和计算无顶点修正的磁化率$P^0_d$。在DQMC模拟中，$P_d$和$P^0_d$的区别在于计算公式\ref{4.5}中的四费米的期望值。准确的说，$P_d(p^0_d)$包含由Wick缩并得到的格林函数，先相乘(平均)，然后再平均(相乘)。因此，$P_d$包含所有相互作用影响，而$P^0_d$仅考虑单粒子水平的相互作用。我们可以进一步定义交互顶点
+其中$g(\delta)$是实空间的一般形状因子，$G=\sum_\delta |g(\delta)|^2$是归一化因子。特别的，对于d波配对通道，沿x和y方向的最近邻分离$\delta$的$g(\delta)=\pm 1$。相似的，我们可以定义和计算无顶点修正的磁化率$P^0_d$。在DQMC模拟中，$P_d$和$P^0_d$的区别在于计算公式\ref{4.5}中的四费米的期望值。准确的说，$P_d(P^0_d)$包含由Wick缩并得到的格林函数，先相乘(平均)，然后再平均(相乘)。因此，$P_d$包含所有相互作用影响，而$P^0_d$仅考虑单粒子水平的相互作用。我们可以进一步定义交互顶点
 \begin{equation}
     \Gamma_d=\frac{1}{P_d}-\frac{1}{p^0_d}
     \label{4.2}
@@ -443,26 +444,25 @@ Hubbard模型有掺杂之后，会出现d波超导，类似的我们构建的模
 \end{equation}
 所以$\Gamma_d P^0_d=-1$标志着d波超导的产生。
 
-利用DQMC计算二维Hubbard模型的超导相，以下是设置参数：
-为了对模型进行测试。与之前发表文章中的图\ref{fig5}(b)进行比对。其中参数如下：
 
-$V_1=1.0$、$V_{2s}=0.001$、$V_{12s}=0.001$，晶格大小为$N=4 \times 4$，计算的温度为$T=0.125t, 0.167t, 0.25t, 0.33t$。
+为了对模型进行测试，与之前发表文章中的图\ref{fig5}(b)进行比对。本文利用DQMC进行模拟验证，其中参数如下：
+$V_1=1.0$、$V_{2}=0.001$、$V_{12}=0.001$，晶格大小为$N=4 \times 4$，计算的温度为$T=0.125t, 0.167t, 0.25t, 0.33t$。可以看到计算结果(图\ref{fig9})与文献中的模拟结果(图\ref{fig8})符合较好。
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
-    \includegraphics[scale=0.42]{/mnt/d/共享文件夹/毕设论文/latex模板/figures/figure9.png}
-    \caption{$P_d$和$P_d^0$随温度的变化}
+    \includegraphics[scale=0.5]{/mnt/d/共享文件夹/毕设论文/latex模板/figures/figure9.png}
+    \caption{$P_d$和$P_d^0$随温度的变化。}
     \label{fig9}
 \end{figure}
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[scale=0.7]{/mnt/d/共享文件夹/毕设论文/latex模板/figures/figure8.jpg}
-    \caption{在半填充($\left \langle n \right \rangle=1$)下，绘制了不同对场模式下对场磁化率P（实心点）和不相关对场磁化率P（空心点）与T的关系图\cite{11}。}
+    \caption{在半填充($\left \langle n \right \rangle=1$)下，不同对场模式下对场磁化率P（实心点）和不相关对场磁化率P（空心点）与T的关系\cite{11}。}
     \label{fig8}
 \end{figure}
 
-利用图\ref{fig8}验证结果正确性，计算结果如图\ref{fig9}所示。
+
 
 
 
